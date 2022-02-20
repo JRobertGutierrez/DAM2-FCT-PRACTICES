@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no" />
+
+        <!-- Primero Bootstrap y después nuestros estilos css -->
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/estilos.css" />
+
+        <title>Recuperar Credenciales</title>
+    </head>
+
+    <body>
+        <div class="container-fluid bg bg-light p-5">
+            <h2 class="text-secondarr text-center">
+                Recuperar Credenciales
+            </h2>
+            <form action="http://localhost/login-form/php/rec-users.php"
+                name="recovery" method="post" id="recovery">
+                <div class="container bg bg-light border border-primary rounded
+                    p-3
+                    my-5">
+                    <h2 class="bg bg-secondary text-white text-center my-2">Recovery</h2>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"
+                                id="inputGroup-sizing-default">Nombre</span>
+                        </div>
+                        <!-- NOMBRE -->
+                        <input type="text" name="nombre" class="form-control"
+                            aria-label="Sizing example input"
+                            placeholder="Introduce tu nombre de usuario"
+                            required
+                            aria-describedby="inputGroup-sizing-default" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"
+                                id="inputGroup-sizing-default">Email</span>
+                        </div>
+                        <!-- EMAIL-->
+                        <input type="email" name="email" class="form-control"
+                            aria-label="Sizing example input"
+                            placeholder="Introduce tu email" required
+                            aria-describedby="inputGroup-sizing-default" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"
+                                id="inputGroup-sizing-default">Teléfono</span>
+                        </div>
+                        <!--TELÉFONO-->
+                        <input type="text" name="telefono" class="form-control"
+                            aria-label="Sizing example input"
+                            placeholder="Introduce tu número de teléfono"
+                            required
+                            aria-describedby="inputGroup-sizing-default" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"
+                                id="inputGroup-sizing-default">Comentario</span>
+                        </div>
+                        <!--COMENTARIO-->
+                        <input type="text" name="comentario"
+                            class="form-control"
+                            aria-label="Sizing example input"
+                            placeholder="Escribenos un mensaje si lo necesitas"
+                            required
+                            aria-describedby="inputGroup-sizing-default" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="col-sm-12 d-flex justify-content-center">
+                            <h3 class="text-center">Al pulsar Enviar recibiras tu pass en el mail proporcionado</h3>.
+                    </div>
+                        
+                    </div>
+                    <!-- ENVIAR -->
+                    <button type="submit" class="btn btn-outline-primary
+                        btn-large
+                        btn-block" onclick="return confirm('¿Estás seguro de solicitar la contraseña por correo?')">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-4">
+                <!-- BTN ATRAS btn btn-primary btn-large btn-block en Azul letra blanca-->
+                <!-- BTN ATRAS btn btn-secondary btn-large btn-block en Azul letra blanca-->
+                <button class="btn btn-primary btn-large btn-block">
+                    <a href="../index.html">
+                        <h3 class="text-white">Volver</h3>
+                    </a>
+                </button>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/mijavascript.js"></script>
+    </body>
+</html>

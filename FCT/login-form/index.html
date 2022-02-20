@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Primero Bootstrap y después nuestros estilos css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Login Form</title>
+</head>
+
+<body>
+    <div class="container-fluid bg bg-secondary p-5">
+        <h2 class="text-white text-center">
+            Conectate
+        </h2>
+        <form action="http://localhost/login-form/php/loginForm.php" name="loginForm" method="post" id="loginForm">
+
+            <div class="container bg bg-light border border-secondary rounded p-3 my-5">
+                <h2 class="bg bg-secondary text-white text-center my-2">LOGIN FORM</h2>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                    </div>
+                    <!-- NOMBRE -->
+                    <input type="text" name="nombre" class="form-control" aria-label="Sizing example input" required aria-describedby="inputGroup-sizing-default">
+
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Pass</span>
+                    </div>
+                    <!-- PASSWORD -->
+                    <input type="password" name="pass" class="form-control" aria-label="Sizing example input" required aria-describedby="inputGroup-sizing-default">
+                </div>
+
+                <!-- ENVIAR -->
+                <button type="submit" class="btn btn-outline-secondary btn-large btn-block">Enviar</button>
+                <button class="btn btn-dark btn-large btn-block my-3">
+                    <a href="http://localhost/login-form/sistema/rec-user.html">
+                      <p class="text-white">
+                        PULSA AQUÍ PARA RECUPERAR CREDENCIALES
+                      </p>
+                    </a>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- JavaScript -->
+    <!-- Primero jQuery, segundo Bootstrap JS  y tercer nuestro javascrit-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mijavascript.js"></script>
+</body>
+</html>

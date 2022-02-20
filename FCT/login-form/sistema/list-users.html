@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no" />
+
+    <!-- Primero Bootstrap y después nuestros estilos css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+
+    <title>Listar Usuarios</title>
+  </head>
+
+  <body>
+    <h2 class="text-secondarr text-center">
+      Listado de los usuarios
+    </h2>
+    <div class="container text-center my-2 border border-success rounded p-3">
+      <button type="button" class="btn btn-outline-success btn-block" value=""
+        id="send">
+        Pulsa para ver los usuarios con peticion ajax
+      </button>
+    </div>
+    <!-- CDN JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <!--  PETICION AJAX -->
+    <script type="text/javascript">
+    $('#send').click(function () {
+      alert('Enviando datos!');
+      $.ajax(
+        {
+          url: 'http://localhost/login-form/php/list-users.php',
+          success: function (data) {
+            //alert('resultado: ' + data + ' ');
+            $("#text-response").html(data);
+          },
+          // AQUI SE RECUPERA EL ERROR - EJ: SI NO ENCUENTRA LA RUTA DEL PHP
+          error: function () {
+            alert('ERROR AL RECUPERAR LOS DATOS')
+          }
+        }
+      )
+    }
+    );
+  </script>
+    
+    <!-- AQUI SE PUEDE MOSTRAR EL MENSAJE RECIBIDO DESDE SERVIDOR -->
+  <div id='text-response' class="container bg bg-success"></div>
+
+    <div class="container-fluid bg bg-light p-5">
+      <!-- <form action="http://localhost/login-form/php/list-users.php" name="insert" method="post" id="list"> -->
+      <form action="../php/list-users.php" method="POST">
+        <div class="container bg bg-light border border-primary rounded p-3
+          my-5">
+          <!-- LISTADO USUARIOS CON EL METODO POST   -->
+          <button type="submit" class="btn btn-outline-primary btn-large
+            btn-block my-1">
+            Pulsa para ver los usuarios con POST
+          </button>
+        </div>
+      </form>
+      <!-- </form> -->
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4 col-sm-4">
+        <!-- BTN ATRAS btn btn-primary btn-large btn-block en Azul letra blanca-->
+        <!-- BTN ATRAS btn btn-secondary btn-large btn-block en Azul letra blanca-->
+        <button class="btn btn-primary btn-large btn-block">
+          <a href="./start-page.html">
+            <h3 class="text-white">Volver</h3>
+          </a>
+        </button>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mijavascript.js"></script>
+  </body>
+
+</html>
